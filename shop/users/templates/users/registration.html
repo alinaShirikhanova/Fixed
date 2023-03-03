@@ -1,0 +1,58 @@
+{% extends 'layout/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/indexx.css' %}">{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="card bg-light mb-3">
+        <div class="card-header">Авторизация</div>
+        <div class="card-body">
+            <form action="{% url 'register' %}" method="post">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="{{ form.first_name.id_for_label }}" class="form-label">Имя</label>
+                        {{ form.first_name }}
+                    </div>
+                    <div class="col-md-6">
+                        <label for="{{ form.username.id_for_label }}" class="form-label">Логин</label>
+                        {{ form.username }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="{{ form.last_name.id_for_label }}" class="form-label">Фамилия</label>
+                        {{ form.last_name }}
+                    </div>
+                    <div class="col-md-6">
+                        <label for="form.password1.id_for_label" class="form-label">Пароль</label>
+                        {{ form.password1 }}
+                    </div>
+                </div>
+                <div class="row">
+                    
+                    <div class="col-md-6">
+                        <label for="form.password2.id_for_label" class="form-label">Повторите пароль</label>
+                        {{ form.password2 }}
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="flex-container">
+                        <button type="submit" class="btn btn-dark">Зарегистрироваться</button>
+
+                    </div>
+                </div>
+            </form>
+            <div class="card_footer">
+                <p>Есть аккаунт? <a href="{% url 'authen' %}">Войти</a></p>
+            </div>
+            {% if form.errors %}
+            <p>{{ form.errors }}</p>
+            {% endif %}
+        </div>
+    </div>
+
+
+</div>
+{% endblock %}

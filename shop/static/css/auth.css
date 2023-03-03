@@ -1,0 +1,46 @@
+body {
+    background-color: rgb(247, 244, 241);
+}
+
+nav {
+    margin-bottom: 50px;
+}
+
+.container {
+    display: flex;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+
+    width: 400px;
+    height: 400px;
+}
+
+.card-header {
+    display: flex;
+    height: 100px;
+    background-color: rgb(238, 234, 230);
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+}
+
+.auth {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.card_footer {
+    text-align: center;
+
+}
+
+.card_footer a {
+    text-decoration: none;
+    color: gray;
+}

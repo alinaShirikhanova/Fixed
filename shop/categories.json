@@ -1,0 +1,20 @@
+[
+  {
+    "model": "trades.category",
+    "pk": 1,
+    "fields": {
+      "name": "",
+      "description": null,
+      "image": ""
+    }
+  },
+  {
+    "model": "trades.category",
+    "pk": 2,
+    "fields": {
+      "name": "Мебель",
+      "description": "Качественная мебель от проверенных производителей",
+      "image": "category_images/shkaf_M8Fkh2i.png"
+    }
+  }
+]

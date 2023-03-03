@@ -1,0 +1,39 @@
+.flex-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+
+.card_footer {
+    display: flex;
+    justify-content: center;
+}
+
+
+.flex-container a {
+    color: gray;
+}
+
+
+.card_footer a {
+    color: gray;
+}
+
+
+nav {
+    margin-bottom: 50px;
+}
+
+
+.avatar {
+    display: flex;
+    justify-content: center;
+}
+
+
+.header {
+    display: flex;
+    justify-content: start;
+}

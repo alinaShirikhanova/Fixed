@@ -1,0 +1,1 @@
+[{"model": "trades.product", "pk": 1, "fields": {"name": "Шкаф из массива дуба", "description": "Представлен во всех пастельных цветах", "price": "24999.00", "amount": 38, "image": "images/shkaf_9d9zxxO.png", "category": 2}}, {"model": "trades.product", "pk": 2, "fields": {"name": "а", "description": "а", "price": "12213.00", "amount": 23, "image": "", "category": 2}}]

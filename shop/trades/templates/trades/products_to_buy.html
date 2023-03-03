@@ -1,0 +1,32 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+<div class="row">
+    {% for product in products %}
+    <div class="card" style="width: 18rem;">
+
+        <div class="card-body">
+            <h5 class="card-title">{{ product.title }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <a href="{% url 'add_product' product.id %}" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="{% if paginator.has_previous %} {% url 'paginator' category.id products.previous_page_number %} {% else %} # {% endif %} " aria-label="Previous"></a>
+    </li>
+      {% for page in products.paginator.page_range %}
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    {% endfor %}
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+{% endblock %}
